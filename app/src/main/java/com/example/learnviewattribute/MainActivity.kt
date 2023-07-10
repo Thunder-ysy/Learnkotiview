@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         val edittxt:EditText=findViewById(R.id.editText)
         val mybutton=findViewById<Button>(R.id.clbutton)
         val bugonext=findViewById<Button>(R.id.gonext)
-
+        val mysecondbtn=findViewById<Button>(R.id.goconvertoapp)
 
 
 
@@ -43,6 +43,11 @@ class MainActivity : AppCompatActivity() {
 //        ** Go To Next Activity by Clicking on A Button
         bugonext.setOnClickListener(){
             val intent=Intent(this,SecondScreen::class.java)
+            startActivity(intent)
+        }
+    //** Go To Unit Converter Activity
+        mysecondbtn.setOnClickListener(){
+            var intent=Intent(this,UnitConverterActivity::class.java)
             startActivity(intent)
         }
 
